@@ -14,11 +14,11 @@
 
   users = {
     groups.admin = {};
-    users.sized = {
+    users.luisnquin = {
       isNormalUser = true;
       extraGroups = ["wheel"];
-      # Try to use age to encrypt this kind of stuff
-      hashedPassword = "$y$j9T$cSurqrcVHajqa.bHgm6R11$sBBanNL/NFUh0wWJXBJxHXP6IM1/ye2sJ3xwFRVxK0C";
+      # Try to use age
+      hashedPassword = "$y$j9T$SNio8sW7C2NoGBbErRqEq0$YNs/TCv4qkcKwHqDoSr/O1qra.GLyjnElc/dgtIT0P9";
       group = "admin";
     };
   };
