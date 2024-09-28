@@ -5,13 +5,17 @@
 
   outputs = {nixpkgs, ...}: let
     system = "x86_64-linux";
-  in {
-    nixosConfigurations.the-sun = nixpkgs.lib.nixosSystem {
+
+    nixosSystem = nixpkgs.lib.nixosSystem {
       inherit system;
 
       modules = [
         ./system/configuration.nix
       ];
     };
+  in {
+    nixosConfigurations."the-sun" = nixosSystem;
+
+    vms."the-sun" = nixosSystem.config.system.build.vm;
   };
 }
