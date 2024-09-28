@@ -14,16 +14,9 @@
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
-  networking.hostName = "the-sun";
-
-  services.openssh = {
-    enable = true;
-    settings.PasswordAuthentication = true;
-  };
-
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [22];
+  networking = {
+    hostName = "the-sun";
+    firewall.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
