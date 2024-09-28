@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
+    ./vm-entrypoint.nix
     ./modules
   ];
 
@@ -14,15 +15,6 @@
   };
 
   networking.hostName = "the-sun";
-
-  virtualisation.vmVariant = {
-    virtualisation = {
-      memorySize = 2048;
-      graphics = false;
-      diskSize = 4096;
-      cores = 3;
-    };
-  };
 
   services.openssh = {
     enable = true;
