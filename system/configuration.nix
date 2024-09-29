@@ -19,8 +19,9 @@
     firewall.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    htop
+  environment.systemPackages = [
+    pkgs.git
+    pkgs.htop
   ];
 
   time.timeZone = "America/El_Salvador";
