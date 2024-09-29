@@ -6,7 +6,7 @@
       isNormalUser = true;
       extraGroups = ["wheel"];
       # Try to use age
-      hashedPassword = "$y$j9T$SNio8sW7C2NoGBbErRqEq0$YNs/TCv4qkcKwHqDoSr/O1qra.GLyjnElc/dgtIT0P9";
+      hashedPassword = "$y$j9T$VZMu2I9/ZfWvX1qcvX2d41$0Xpxq/.5dq9zdjwUA//GHXXcgQSTCxxnhc5b5.fvGgC";
       group = "admin";
     };
   };
