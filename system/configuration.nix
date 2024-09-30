@@ -14,6 +14,24 @@
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
+  system.activationScripts = {
+    banner.text = ''
+        echo '
+                               ⢴⡀
+                          ⢀⠀⠀⠀⠀⡇⢑⠀⠀⢀⡐⢱
+                          ⠈⢏⠢⣀⣘⠀⣀⣣⣔⣁⣀⡯⠀⣀⣀⣀
+                          ⠀⠈⡂⠔⠿⠉⠀⠈⠀⠀⠀⠉⠓⢄⡰⠋
+                         ⢏⠈⠒⠷⣁⣀⡀⠀⠀⠀⣀⣀⠀⠀⠈⡗⠦⢄
+                          ⠳⢄⢘⢻⣴⣿⠥⢼⣽⣷⣿⠤⠖⠒⡇⠀⣀⣈⡇
+       ┓                ⠘⢗⠒⠛⢒⠙⠛⠁⠀⠀⠙⠛⠁⠀⠀⡸⠙⡍⠁
+      ╋┣┓┏┓  ┏┓┏┏┓        ⠁⠒⠄⢵⣀⠀⠀⠀⠀⠀⠀⡠⣾⣁⡀⠘⣄
+      ┗┛┗┗   ┛┗┻┛┗          ⣀⠴⠋⣑⣶⠒⢲⢮⠁⢰⠀⠀⠉⠓⠋
+                           ⣎⡡⠆⠋⠀⣏⣀⠎⠀⠘⣄⢀⡇
+                                ⠀⠁⠀⠀⠀⠀⠉
+        '
+    '';
+  };
+
   networking = {
     hostName = "the-sun";
     firewall.enable = true;
