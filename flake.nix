@@ -1,5 +1,5 @@
 {
-  description = "Reproducible infrastructure and usize for \"The Sun\"";
+  description = "Infrastructure for \"The Sun\" (home server) ";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
