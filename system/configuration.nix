@@ -1,4 +1,9 @@
-{pkgs, ...}: {
+{
+  host,
+  pkgs,
+  nix,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ./vm-entrypoint.nix
@@ -43,7 +48,11 @@
     pkgs.htop
   ];
 
-  time.timeZone = "America/El_Salvador";
+  time = {
+    inherit (host) timeZone;
+  };
 
-  system.stateVersion = "24.11";
+  system = {
+    inherit (nix) stateVersion;
+  };
 }

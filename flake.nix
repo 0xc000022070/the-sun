@@ -6,16 +6,27 @@
   outputs = {nixpkgs, ...}: let
     system = "x86_64-linux";
 
+    host = {
+      name = "the-sun";
+      timeZone = "America/El_Salvador";
+    };
+
+    nix.stateVersion = "24.11";
+
     nixosSystem = nixpkgs.lib.nixosSystem {
       inherit system;
+
+      specialArgs = {
+        inherit host nix;
+      };
 
       modules = [
         ./system/configuration.nix
       ];
     };
   in {
-    nixosConfigurations."the-sun" = nixosSystem;
+    nixosConfigurations.${host.name} = nixosSystem;
 
-    vms."the-sun" = nixosSystem.config.system.build.vm;
+    vms.${host.name} = nixosSystem.config.system.build.vm;
   };
 }
